@@ -68,7 +68,7 @@
   }
 }
 
-.menu-link {
+.menu-link__mob {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -100,38 +100,6 @@
   &:hover .menu-icon__chevrone {
     stroke: $white-text-color;
   }
-}
-
-.menu-link__active {
-  color: $white-text-color;
-  background: #5932ea;
-  border-radius: 8px;
-  stroke: $white-text-color;
-}
-
-.menu-link__inner {
-  display: flex;
-  align-items: center;
-}
-
-.menu-icon {
-  width: 24px;
-  height: 24px;
-  fill: inherit;
-  margin-right: 14px;
-}
-
-.menu-icon__fix {
-  width: 24px;
-  height: 24px;
-  margin-right: 14px;
-  fill: $white-text-color;
-}
-
-.menu-icon__chevrone {
-  width: 16px;
-  height: 16px;
-  fill: none;
 }
 
 .user {
