@@ -1,0 +1,159 @@
+.sidemenu {
+  display: none;
+  max-width: 306px;
+  width: 100%;
+
+  background: #ffffff;
+  box-shadow: 0px 10px 60px rgba(226, 236, 249, 0.5);
+
+  @media screen and(min-width: 768px) {
+    padding: 26px 18px 56px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media screen and(min-width: 1439px) {
+    padding: 36px 28px 76px;
+  }
+}
+
+.sidemenu__inner {
+  margin-bottom: 100px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 586px;
+  }
+}
+
+.logo-inner {
+  display: flex;
+  align-items: baseline;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 53px;
+}
+
+.logo-icon {
+  width: 37px;
+  height: 37px;
+  fill: $title-color;
+  margin-right: 8px;
+}
+
+.logo-title {
+  font-weight: 600;
+  font-size: 26px;
+  line-height: calc(39 / 26);
+  letter-spacing: 0.01em;
+
+  color: $title-color;
+  margin-bottom: 0;
+  margin-right: 4px;
+}
+
+.version {
+  font-size: 10px;
+  line-height: calc(15 / 10);
+
+  color: $version-text-color;
+}
+
+.menu-item {
+  max-width: 250px;
+
+  &:not(:last-child) {
+    margin-bottom: 18px;
+  }
+}
+
+.menu-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  color: $menu-text-color;
+
+  padding: 11px 8px 11px 11px;
+  border-radius: 8px;
+  fill: $menu-text-color;
+  stroke: $menu-text-color;
+  transition: color 250ms linear, background 250ms linear, fill 250ms linear,
+    stroke 250ms linear;
+
+  &:hover,
+  &:focus {
+    color: $white-text-color;
+    background: $selected-item-color;
+    border-radius: 8px;
+    fill: $white-text-color;
+    stroke: $white-text-color;
+  }
+
+  &:hover .menu-icon__fix,
+  &:focus .menu-icon__fix {
+    fill: $selected-item-color;
+    stroke: $white-text-color;
+  }
+
+  &:hover .menu-icon__chevrone {
+    stroke: $white-text-color;
+  }
+}
+
+.menu-link__active {
+  color: $white-text-color;
+  background: #5932ea;
+  border-radius: 8px;
+  stroke: $white-text-color;
+}
+
+.menu-link__inner {
+  display: flex;
+  align-items: center;
+}
+
+.menu-icon {
+  width: 24px;
+  height: 24px;
+  fill: inherit;
+  margin-right: 14px;
+}
+
+.menu-icon__fix {
+  width: 24px;
+  height: 24px;
+  margin-right: 14px;
+  fill: $white-text-color;
+}
+
+.menu-icon__chevrone {
+  width: 16px;
+  height: 16px;
+  fill: none;
+}
+
+.user {
+  display: flex;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 12px;
+}
+
+.user-info__name {
+  letter-spacing: 0.01em;
+  color: $title-color;
+}
+
+.user-info__proff {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: calc(18 / 12);
+  letter-spacing: 0.01em;
+
+  color: $user-prof-color;
+}

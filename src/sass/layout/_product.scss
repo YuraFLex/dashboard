@@ -1,0 +1,310 @@
+.product-section {
+  max-width: 1134px;
+  width: 100%;
+  padding: 20px 10px;
+
+  @media screen and(min-width: 767px) {
+    padding: 21px 41px;
+  }
+
+  @media screen and(min-width: 1439px) {
+    padding: 41px 71px;
+  }
+}
+
+.product-title {
+  display: inline-flex;
+  font-size: 24px;
+  line-height: calc(36 / 24);
+  margin-bottom: 51px;
+  color: $title-color;
+
+  // @media screen and(min-width: 825px) {
+  // margin-bottom: 21px;
+  //
+  // }
+}
+
+.product__inner {
+  min-width: 300px;
+  max-width: 968px;
+  background: #ffffff;
+  box-shadow: 0px 10px 60px rgba(226, 236, 249, 0.5);
+  border-radius: 30px;
+}
+
+.product__search {
+  padding: 10px 23px 16px 18px;
+  text-align: center;
+
+  @media screen and(min-width: 500px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+
+  @media screen and(min-width: 767px) {
+    padding: 20px 33px 24px 28px;
+  }
+
+  @media screen and(min-width: 1439px) {
+    padding: 30px 53px 26px 38px;
+  }
+}
+
+.product-sub-title {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: calc(33 / 22);
+  margin-bottom: 7px;
+  color: $title-color;
+}
+
+.members-title {
+  font-weight: 400;
+  margin-bottom: 0;
+  color: $accent-color;
+  margin-bottom: 15px;
+
+  @media screen and(min-width: 767px) {
+    text-align: left;
+  }
+}
+
+.product-label {
+  position: relative;
+}
+
+.icon-search {
+  position: absolute;
+  top: -2px;
+  left: 8px;
+  width: 24px;
+  height: 24px;
+
+  @media screen and(min-width: 500px) {
+    top: 8px;
+  }
+}
+
+.product-search__input {
+  max-width: 216px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: calc(18 / 12);
+
+  color: $info-text-color;
+  padding: 10px 10px 10px 40px;
+  background: #f9fbff;
+
+  border-radius: 10px;
+  border-color: transparent;
+  // @media screen and(max-width: 825px) {
+  //   max-width: 300px;
+  // }
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+
+  & thead {
+    text-align: left;
+    color: $info-text-color;
+    border-bottom: 1px solid $border-color;
+  }
+
+  & tbody tr {
+    position: relative;
+  }
+
+  @media screen and(max-width: 1024px) {
+    & td,
+    & th {
+      font-size: 12px;
+      padding: 10px;
+    }
+
+    & thead {
+      display: none;
+    }
+
+    & tr {
+      display: block;
+    }
+
+    & td {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    & td::before {
+      content: attr(data-label);
+      font-weight: 500;
+      color: $info-text-color;
+    }
+
+    & tr:nth-child(even) {
+      background-color: $product-bg-color;
+    }
+  }
+
+  @media screen and(min-width: 768px) {
+    & td,
+    & th {
+      padding: 15px;
+    }
+  }
+
+  @media screen and(min-width:1439px) {
+    & td,
+    & th {
+      font-weight: 500;
+      padding: 20px;
+
+      &:first-child {
+        padding-left: 38px;
+      }
+
+      &:last-child {
+        padding-right: 38px;
+      }
+
+      & th {
+        padding: 14px;
+
+        &:first-child {
+          padding: 14px 14px 14px 38px;
+        }
+      }
+    }
+  }
+}
+
+.table-border:after {
+  content: '';
+  position: absolute;
+  top: 0px;
+  right: 40px;
+  bottom: 0px;
+  left: 40px;
+  border-bottom: 1px solid $border-color;
+}
+
+.status {
+  display: block;
+  text-transform: uppercase;
+  border-radius: 4px;
+  padding: 4px 12px;
+}
+
+.status--active {
+  color: $active-btn-color;
+  background: $active-btn-bg-color;
+  border: 1px solid $active-btn-color;
+}
+
+.status--inactive {
+  padding: 4px 6px;
+  color: $inactive-btn--color;
+  background: $inactive-btn-bg-color;
+  border: 1px solid $inactive-btn--color;
+}
+
+.product-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  padding-bottom: 25px;
+
+  @media screen and(min-width: 768px) {
+    padding: 30px 40px 40px 38px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.product-footer__list {
+  display: flex;
+  gap: 12px;
+}
+
+.product-footer__text {
+  color: $info-text-color;
+  font-size: 12px;
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+  }
+}
+
+.pagination {
+  width: 24px;
+  height: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  line-height: 100%;
+
+  color: $pagination-text-color;
+  background: #f5f5f5;
+  border: 1px solid $border-color;
+  border-radius: 4px;
+  fill: $pagination-text-color;
+  transition: color 250ms linear, border 250ms linear, background 250ms linear;
+
+  &:hover,
+  &:focus {
+    background: #5932ea;
+    border: 1px solid #5932ea;
+    color: $white-text-color;
+    fill: $white-text-color;
+  }
+}
+
+.hide {
+  // @media screen and (max-width: 425px) {
+  //   position: absolute;
+  //   width: 1px;
+  //   height: 1px;
+  //   margin: -1px;
+  //   border: 0;
+  //   padding: 0;
+  //   white-space: nowrap;
+  //   clip-path: inset(100%);
+  //   clip: rect(0 0 0 0);
+  //   overflow: hidden;
+  // }
+}
+
+.pagination--active {
+  background: #5932ea;
+  border: 1px solid #5932ea;
+  color: $white-text-color;
+}
+
+.pagination--inactive {
+  background: transparent;
+  border: none;
+
+  &:hover,
+  &:focus {
+    background: transparent;
+    border: none;
+    color: #404b52;
+  }
+}
+
+.pagination__link {
+  color: inherit;
+}
+
+.pagination-icon {
+  width: 8px;
+  height: 12px;
+  fill: inherit;
+}
