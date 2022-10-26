@@ -12,15 +12,8 @@
     flex-direction: column;
   }
 
-  @media screen and(min-width: 1439px) {
+  @media screen and(min-width: 1200px) {
     padding: 36px 28px 76px;
-  }
-}
-
-.sidemenu__inner {
-  margin-bottom: 100px;
-  @media screen and (min-width: 768px) {
-    margin-bottom: 586px;
   }
 }
 
@@ -136,6 +129,11 @@
 
 .user {
   display: flex;
+  margin-top: auto;
+
+  @media screen and (min-width: 1024px) {
+    margin-top: 586px;
+  }
 }
 
 .user-info {
