@@ -115,7 +115,7 @@
 
   &:hover .menu-icon__fix,
   &:focus .menu-icon__fix {
-    fill: $selected-item-color;
+    fill: $white-text-color;
     stroke: $white-text-color;
   }
 
@@ -131,33 +131,9 @@
   stroke: $white-text-color;
 }
 
-.menu-link__inner {
+.menu-link__inner-mob {
   display: flex;
   align-items: center;
-}
-
-.menu-icon {
-  width: 24px;
-  height: 24px;
-  fill: inherit;
-  margin-right: 14px;
-}
-
-.menu-icon__fix {
-  width: 24px;
-  height: 24px;
-  margin-right: 14px;
-  fill: $white-text-color;
-}
-
-.menu-icon__chevrone {
-  width: 16px;
-  height: 16px;
-  fill: none;
-}
-
-.noactive {
-  background-color: #fff;
 }
 
 .user-mobile {
