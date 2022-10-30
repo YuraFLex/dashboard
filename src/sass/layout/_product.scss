@@ -239,7 +239,9 @@
   border: 1px solid $inactive-btn--color;
 }
 
-.product-footer {
+// ================== Pagination ==================
+
+.pagination {
   display: flex;
   justify-content: space-between;
   padding: 10px;
@@ -249,18 +251,13 @@
     padding: 30px 40px 40px 38px;
   }
 
-  @media screen and (max-width: 1023px) {
+  @media screen and (max-width: 850px) {
     flex-direction: column;
     align-items: center;
   }
 }
 
-.product-footer__list {
-  display: flex;
-  gap: 12px;
-}
-
-.product-footer__text {
+.pagination-title {
   color: $info-text-color;
   font-size: 12px;
   @media screen and (min-width: 768px) {
@@ -268,7 +265,12 @@
   }
 }
 
-.pagination {
+.pagination-list {
+  display: flex;
+  gap: 12px;
+}
+
+.pagination-link {
   width: 24px;
   height: 22px;
   display: flex;
@@ -308,26 +310,10 @@
   // }
 }
 
-.pagination--active {
+.pagination-link__active {
   background: #5932ea;
   border: 1px solid #5932ea;
-  color: $white-text-color;
-}
-
-.pagination--inactive {
-  background: transparent;
-  border: none;
-
-  &:hover,
-  &:focus {
-    background: transparent;
-    border: none;
-    color: #404b52;
-  }
-}
-
-.pagination__link {
-  color: inherit;
+  color: #ffffff;
 }
 
 .pagination-icon {
