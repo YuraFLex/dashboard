@@ -3,11 +3,15 @@
   width: 100%;
   padding: 20px 10px;
 
+  @media screen and(min-width: 449px) {
+    padding: 20px 15px;
+  }
+
   @media screen and(min-width: 767px) {
     padding: 21px 41px;
   }
 
-  @media screen and(min-width: 1200px) {
+  @media screen and(min-width: 1210px) {
     padding: 41px 71px;
   }
 }
@@ -31,6 +35,8 @@
   background: #ffffff;
   box-shadow: 0px 10px 60px rgba(226, 236, 249, 0.5);
   border-radius: 30px;
+
+  margin: 0 auto;
 }
 
 .product__search {
@@ -63,9 +69,7 @@
 
 .members-title {
   font-weight: 400;
-  margin-bottom: 0;
   color: $accent-color;
-  margin-bottom: 15px;
 
   @media screen and(min-width: 767px) {
     text-align: left;
@@ -74,22 +78,24 @@
 
 .product-label {
   position: relative;
+  display: block;
+
+  @media screen and(max-width: 499px) {
+    margin-top: 15px;
+  }
 }
 
 .icon-search {
   position: absolute;
-  top: -2px;
+  top: 50%;
+  transform: translateY(-50%);
   left: 8px;
   width: 24px;
   height: 24px;
-
-  @media screen and(min-width: 500px) {
-    top: 8px;
-  }
 }
 
 .product-search__input {
-  max-width: 216px;
+  width: 100%;
   font-weight: 400;
   font-size: 12px;
   line-height: calc(18 / 12);
@@ -108,6 +114,7 @@
 table {
   border-collapse: collapse;
   width: 100%;
+  font-size: 0.8rem;
 
   & thead {
     text-align: left;
@@ -119,11 +126,19 @@ table {
     position: relative;
   }
 
-  @media screen and(max-width: 1024px) {
+  @media screen and(min-width: 768px) {
+    & td,
+    & th {
+      padding: 15px;
+    }
+  }
+
+  @media screen and(max-width: 850px) {
     & td,
     & th {
       font-size: 12px;
       padding: 10px;
+      font-size: 0.8rem;
     }
 
     & thead {
@@ -147,13 +162,6 @@ table {
 
     & tr:nth-child(even) {
       background-color: $product-bg-color;
-    }
-  }
-
-  @media screen and(min-width: 768px) {
-    & td,
-    & th {
-      padding: 15px;
     }
   }
 
@@ -184,8 +192,8 @@ table {
 
 .table-border:after {
   content: '';
+  height: 1px;
   position: absolute;
-  top: 0px;
   right: 40px;
   bottom: 0px;
   left: 40px;
@@ -197,6 +205,13 @@ table {
   text-transform: uppercase;
   border-radius: 4px;
   padding: 4px 12px;
+
+  @media screen and (min-width: 849px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 0;
+  }
 }
 
 .status--active {
@@ -222,7 +237,7 @@ table {
     padding: 30px 40px 40px 38px;
   }
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1023px) {
     flex-direction: column;
     align-items: center;
   }

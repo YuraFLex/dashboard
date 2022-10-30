@@ -6,7 +6,7 @@
   padding: 15px 10px;
   background-color: #fff;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1150px) {
     display: none;
   }
 }
@@ -14,6 +14,7 @@
 .mobile-logo {
   display: flex;
   align-items: center;
+  color: inherit;
 }
 
 .mobile-logo__icon {

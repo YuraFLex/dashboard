@@ -2,17 +2,19 @@
   display: none;
   max-width: 306px;
   width: 100%;
+  width: 100vh;
 
   background: #ffffff;
   box-shadow: 0px 10px 60px rgba(226, 236, 249, 0.5);
 
-  @media screen and(min-width: 768px) {
-    padding: 26px 18px 56px;
+  // @media screen and(min-width: 768px) {
+  //   padding: 26px 18px 56px;
+
+  // }
+
+  @media screen and(min-width: 1150px) {
     display: flex;
     flex-direction: column;
-  }
-
-  @media screen and(min-width: 1200px) {
     padding: 36px 28px 76px;
   }
 }
@@ -26,6 +28,7 @@
   display: flex;
   align-items: center;
   margin-bottom: 53px;
+  color: inherit;
 }
 
 .logo-icon {
@@ -46,7 +49,7 @@
   margin-right: 4px;
 }
 
-.version {
+.logo-version {
   font-size: 10px;
   line-height: calc(15 / 10);
 
@@ -131,9 +134,9 @@
   display: flex;
   margin-top: auto;
 
-  @media screen and (min-width: 1024px) {
-    margin-top: 586px;
-  }
+  // @media screen and (min-width: 1024px) {
+  //   margin-top: 586px;
+  // }
 }
 
 .user-info {
