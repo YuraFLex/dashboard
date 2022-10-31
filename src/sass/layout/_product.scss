@@ -125,77 +125,83 @@
   border-collapse: collapse;
   width: 100%;
   font-size: 0.8rem;
+}
 
-  & .table-head {
-    text-align: left;
-    color: $info-text-color;
-    border-bottom: 1px solid $border-color;
+.table-head {
+  text-align: left;
+  color: $info-text-color;
+  border-bottom: 1px solid $border-color;
+
+  @media screen and(max-width: 850px) {
+    display: none;
   }
+}
 
-  & .table-body .table-row {
-    position: relative;
-  }
+.table-body {
+  position: relative;
+}
 
+.table-body__row {
   @media screen and(min-width: 768px) {
-    & .table-body__row,
-    & .table-head__row {
-      padding: 15px;
-    }
+    padding: 15px;
   }
 
   @media screen and(max-width: 850px) {
-    & .table-body__row,
-    & .table-head__row {
-      font-size: 12px;
-      padding: 10px;
-      font-size: 0.8rem;
-    }
+    font-size: 12px;
+    padding: 10px;
+    font-size: 0.8rem;
 
-    & .table-head {
-      display: none;
-    }
+    display: flex;
+    justify-content: space-between;
 
-    & .table-row {
-      display: block;
-    }
-
-    & .table-body__row {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    & .table-body__row::before {
+    &::before {
       content: attr(data-label);
       font-weight: 500;
       color: $info-text-color;
     }
-
-    & .table-row:nth-child(even) {
-      background-color: $product-bg-color;
-    }
   }
 
   @media screen and(min-width:1439px) {
-    & .table-body__row,
-    & .table-head__row {
-      font-weight: 500;
-      padding: 20px;
+    font-weight: 500;
+    padding: 20px;
 
-      &:first-child {
-        padding-left: 38px;
-      }
+    &:first-child {
+      padding-left: 38px;
+    }
 
-      &:last-child {
-        padding-right: 38px;
-      }
+    &:last-child {
+      padding-right: 38px;
+    }
+  }
+}
 
-      & .table-head__row {
-        padding: 14px;
+.table-head__row {
+  @media screen and(min-width: 768px) {
+    padding: 15px;
+  }
 
-        &:first-child {
-          padding: 14px 14px 14px 38px;
-        }
-      }
+  @media screen and(max-width: 850px) {
+    font-size: 12px;
+    padding: 10px;
+    font-size: 0.8rem;
+  }
+
+  @media screen and(min-width:1439px) {
+    font-weight: 500;
+    padding: 20px;
+
+    &:first-child {
+      padding-left: 38px;
+    }
+
+    &:last-child {
+      padding-right: 38px;
+    }
+
+    padding: 14px;
+
+    &:first-child {
+      padding: 14px 14px 14px 38px;
     }
   }
 }
@@ -208,6 +214,18 @@
   bottom: 0px;
   left: 40px;
   border-bottom: 1px solid $border-color;
+}
+
+.table-row {
+  position: relative;
+
+  @media screen and(max-width: 850px) {
+    display: block;
+
+    &:nth-child(even) {
+      background-color: $product-bg-color;
+    }
+  }
 }
 
 // ================== Status ==================
